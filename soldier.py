@@ -1,9 +1,9 @@
 class Soldier:
     def __init__(self, id, firstName, lastName, gender, city, distance, Placement_status):
-        self.id = id
-        self.firstName = firstName
-        self.lastName = lastName
-        self.gender = gender
-        self.city = city
-        self.distance = distance
-        self.Placement_status = Placement_status
+        self.id: int = id
+        self.firstName: str = firstName
+        self.lastName: str = lastName
+        self.gender: str = gender
+        self.city: str = city
+        self.distance: int = distance
+        self.Placement_status: str = Placement_status

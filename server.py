@@ -1,10 +1,10 @@
 from fastapi import FastAPI, File, UploadFile
+import sqlite3
 import uvicorn
 import csv
+import sqlite3
 
 app = FastAPI()
-items = []
-
 
 @app.get("/")
 def read_root():
@@ -21,6 +21,7 @@ def get_file(file: UploadFile = File()):
     rows = [row for row in reader]
     colums = rows[0]
     rows = rows[1:]
+    num_params = ['?' for _ in colums]
 
     return{
         "file_length":file.size,
