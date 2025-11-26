@@ -2,7 +2,7 @@ import csv
 import sqlite3
 from soldier import Soldier
 class CreatTable:
-    def __init__(self, name_db = 'test.db'):
+    def __init__(self, name_db = 'soldier.db'):
         self.db_name = name_db
         self.connection = sqlite3.connect(name_db)
         self.cursor = self.connection.cursor()
@@ -24,5 +24,5 @@ class CreatTable:
         quary = "INSERT INTO soldier(id,firstName,lastName,gender,city,distance,placement_status) VALUES (?,?,?,?,?,?,?)"
         self.cursor.execute(quary,(id, firstName, lastName, gender, city, distance, Placement_status))
 
-        
+
 
